@@ -8,12 +8,12 @@ jobs:
     name: my job
     runs-on: ${{ matrix.os }}
     strategy:
-    matrix: 
-      os: [macos-latest, windows-latest, ubuntu-18.04]
-      node: [10, 12.x, 14]
-      exclude:
-        - os: macos-latest
-          node: 10
+      matrix: 
+        os: [macos-latest, windows-latest, ubuntu-18.04]
+        node: [10, 12.x, 14]
+        exclude:
+          - os: macos-latest
+            node: 10
     steps:
       - uses: actions/checkout@v2
       - name: Use node.js ${{ matrix.node }}
