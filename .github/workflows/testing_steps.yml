@@ -23,7 +23,7 @@ jobs:
           node-version: 12
           registry-url: https://npm.pkg.github.com/ # if your publishing your package to npm or github package repo
     # Reference a specific commit
-    - uses: actions/setup-node@0e2f9cd
+    - uses: actions/setup-node@main
     # Reference the major version of a release
     - uses: actions/setup-node@v1
     # Reference a minor version of a release
