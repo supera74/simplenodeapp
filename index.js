@@ -4,7 +4,6 @@
 # outputs a response to the browser
 # checks for the environment variable 'process.env.PORT`, or 5000 if not available
 # then just output this string to the console
-# Aleksandro Matejic
 
 const http = require('http');
 
