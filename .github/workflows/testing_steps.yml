@@ -27,7 +27,7 @@ jobs:
     # Reference the major version of a release
     - uses: actions/setup-node@v1
     # Reference a minor version of a release
-    - uses: actions/setup-node@v1.2
+    - uses: actions/setup-node@v2
     # Reference a branch
     - uses: actions/setup-node@master
     - name: my fifth step
