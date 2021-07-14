@@ -1,21 +1,25 @@
 name: build
 on:
-push:
-paths: - '\*\*.js'
+  push:
+    paths:
+      - '**.js'
 jobs:
-build:
-name: my job
-runs-on: ${{ matrix.os }}
+  build:
+    name: my job
+    runs-on: ${{ matrix.os }}
     strategy:
-      matrix:
-        os: [macos-latest, windows-latest, ubuntu-18.04]
-        node: [10, 12.x, 14]
-        exclude:
-          - os: macos-latest
-            node: 10
+    matrix: 
+      os: [macos-latest, windows-latest, ubuntu-18.04]
+      node: [10, 12.x, 14]
+      exclude:
+        - os: macos-latest
+          node: 10
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node }}
-uses: actions/setup-node@v1
-with:
-node-version: \${{ matrix.node }} - run: npm ci - run: npm run build --if-present
+      - uses: actions/checkout@v2
+      - name: Use node.js ${{ matrix.node }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node }} 
+      - run: npm ci
+      - run: npm run build --if-present
+      
