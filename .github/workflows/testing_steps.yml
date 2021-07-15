@@ -30,7 +30,7 @@ jobs:
     - uses: actions/setup-node@v2
     # Reference a branch
     - uses: actions/setup-node@master
-    - name: my fourth step
+    - name: my fourth step -test
       uses: actions/first-interaction@v1
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
